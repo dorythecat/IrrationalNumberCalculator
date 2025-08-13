@@ -32,7 +32,6 @@ def pi(iterations: int = 100) -> Decimal:
     return square_root(6 * sum, 0, int(iterations / 10))
 
 def euler(iterations: int = 100) -> Decimal:
-    sum = 1
     return power(1 + Decimal(1 / iterations), iterations)
 
 if __name__ == "__main__":
