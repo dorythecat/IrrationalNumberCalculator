@@ -17,7 +17,10 @@ def factorial(x: Decimal) -> Decimal:
 def power(x: Decimal, y: int) -> Decimal:
     if y == 0:
         return 1
-    return x * power(x, y - 1)
+    power = x
+    for _ in range(y - 1):
+        power *= x
+    return power
 
 def pi(iterations: int = 100) -> Decimal:
     sum = 0
