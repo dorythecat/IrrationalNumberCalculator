@@ -40,13 +40,13 @@ if __name__ == "__main__":
             exit()
         case "1":
             i = 1
-            print("We're gonna claculate the square root of 2 using Heron's method (initial guess of 0)")
+            print("We're gonna calculate the square root of 2 using Heron's method (initial guess of 0)")
             while True:
                 print(f"{i} iterations: {square_root(Decimal(2), 0, i)}")
                 i *= 10
         case "2":
             i = 10
-            print("We're gonna claculate pi using the sum of the reciprocals of the squares of the first n natural numbers")
+            print("We're gonna calculate pi using the sum of the reciprocals of the squares of the first n natural numbers")
             while True:
                 print(f"{i} iterations: {pi(i)}")
                 i *= 10
