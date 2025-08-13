@@ -9,3 +9,8 @@ def factorial(x: float):
     if x == 1 or x == 2:
         return x
     return (x * x - x) * factorial(x - 2)
+
+def power(x: float, y: int):
+    if y == 0:
+        return 1
+    return x * power(x, y - 1)
