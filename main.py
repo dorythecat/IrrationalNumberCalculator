@@ -12,15 +12,18 @@ def square_root(x: Decimal, guess: Decimal = 0, iterations: int = 10) -> Decimal
 def factorial(x: Decimal) -> Decimal:
     if x == 1 or x == 2:
         return x
-    return x * factorial(x - 1)
+    f = 2
+    for i in range(3, x + 1):
+        f *= i
+    return f
 
 def power(x: Decimal, y: int) -> Decimal:
     if y == 0:
         return 1
-    power = x
+    p = x
     for _ in range(y - 1):
-        power *= x
-    return power
+        p *= x
+    return p
 
 def pi(iterations: int = 100) -> Decimal:
     sum = 0
