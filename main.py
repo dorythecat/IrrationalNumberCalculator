@@ -15,8 +15,8 @@ def power(x: float, y: int):
         return 1
     return x * power(x, y - 1)
 
-def pi(iterations: int = 10):
+def pi(iterations: int = 100):
     sum = 0
     for i in range(1, iterations):
         sum += 1 / (i * i)
-    return square_root(6 * sum)
+    return square_root(6 * sum, int(iterations / 10))
