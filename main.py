@@ -34,6 +34,9 @@ def pi(iterations: int = 100) -> Decimal:
 def euler(iterations: int = 100) -> Decimal:
     return power(1 + Decimal(1 / iterations), iterations)
 
+def golden_ratio(iterations: int = 100) -> Decimal:
+    return Decimal((1 + Decimal(square_root(5, 0, iterations))) / 2)
+
 if __name__ == "__main__":
     print("Welcome to the Irrational Number Calculator!")
     print("This calculator will calculate irrational numbers like pi and sqrt(2), with 100 decimal digits!")
@@ -43,10 +46,12 @@ if __name__ == "__main__":
     print("1) Square Root of 2")
     print("2) Pi")
     print("3) Euler's Number")
+    print("4) Golden Ratio")
 
     response = input("")
     match response:
         case "q":
+            print("Aborting...")
             exit()
         case "1":
             i = 1
@@ -66,3 +71,12 @@ if __name__ == "__main__":
             while True:
                 print(f"{i} iterations: {euler(i)}")
                 i *= 10
+        case "4":
+            i = 10
+            print("We're gonna calculate the golden ratio using the sum of the reciprocals of the first n natural numbers")
+            while True:
+                print(f"{i} iterations: {golden_ratio(i)}")
+                i *= 10
+        case _:
+            print("Invalid input. Aborting.")
+            exit()
